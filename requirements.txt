@@ -5,3 +5,8 @@ langchain-google-genai
 faiss-cpu
 python-dotenv
 pypdf
+numpy
+sentence-transformers
+chromadb
+scikit-learn
+langchain-groq
