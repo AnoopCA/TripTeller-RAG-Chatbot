@@ -9,12 +9,12 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(r"D:\ML_Projects\TripTeller-RAG-Chatbot\Keys\.env")
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 PDF_FILE = r"D:\ML_Projects\TripTeller-RAG-Chatbot\Data\munnar_highres.pdf"
-FAISS_FOLDER = "faiss_store"  # folder to save embeddings for persistence
+FAISS_FOLDER = r"D:\ML_Projects\TripTeller-RAG-Chatbot\Vector_store\faiss"  # folder to save embeddings for persistence
 
 loader = PyPDFLoader(PDF_FILE)
 docs = loader.load()
